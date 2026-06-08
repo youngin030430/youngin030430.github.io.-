@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>왁뿌볼 | 눌러서 깨뜨리기</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">WAX POP LAB</p>
+          <h1>왁뿌볼</h1>
+        </div>
+        <button id="soundButton" class="icon-button" type="button" aria-pressed="true">
+          <span class="sound-icon">♪</span>
+          <span>소리 켜짐</span>
+        </button>
+      </header>
+
+      <section class="game-card" aria-label="왁뿌볼 깨뜨리기 게임">
+        <div class="status-row">
+          <div>
+            <p class="status-label">오늘의 왁뿌볼</p>
+            <p id="statusText" class="status-text">살짝 눌러보세요</p>
+          </div>
+        </div>
+
+        <div id="stage" class="stage">
+          <canvas id="gameCanvas" aria-label="클릭하여 왁뿌볼을 깨뜨리세요"></canvas>
+          <p id="hint" class="hint">길게 눌러 왁스를 깨뜨리세요</p>
+        </div>
+
+        <div class="progress-track" aria-hidden="true">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <div class="controls">
+          <div>
+            <p class="control-label">선택한 모델</p>
+            <p class="selected-model">청사과 왁뿌볼</p>
+          </div>
+          <button id="resetButton" class="reset-button" type="button">
+            <span>↻</span>
+            새 볼 꺼내기
+          </button>
+        </div>
+        <div class="shape-row">
+          <div>
+            <p class="control-label">왁뿌볼 모양</p>
+            <p class="shape-note">사진 레퍼런스로 모양을 계속 추가할 수 있어요</p>
+          </div>
+          <button class="shape-chip active" data-shape="greenApple" type="button">
+            <span class="shape-preview apple"></span>
+            청사과
+          </button>
+        </div>
+      </section>
+
+      <footer>
+        <span>천천히 눌러도 좋아요</span>
+        <span class="dot">•</span>
+        <span>마지막 한 번은 시원하게</span>
+      </footer>
+    </main>
+
+    <script src="./app.js?v=20260609"></script>
+  </body>
+</html>
